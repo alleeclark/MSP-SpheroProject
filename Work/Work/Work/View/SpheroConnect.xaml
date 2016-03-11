@@ -4,8 +4,8 @@
              x:Class="Work.View.SpheroConnect">
   <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
   <StackLayout Padding="10.0">
-  <Label Text ="Welcome to Sprehab" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+    <Label Text ="Welcome to Sprehab" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
     <Label x:Name="SpheroName" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
-    <Switch Toggled="ConnectionToggle_Toggled" VerticalOptions="Center"/>
+    <Switch Toggled="ConnectionToggle_Toggled" VerticalOptions="Center" HorizontalOptions="Center"/>
   </StackLayout>
 </ContentPage>
