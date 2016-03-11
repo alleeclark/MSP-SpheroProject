@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Work.View.SpheroConnect">
   <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
-  <StackLayout>
-  <Label Text ="I just need to see somoething else" VerticalOptions="Center"/>
-    <Label x:Name="SpheroName"/>
+  <StackLayout Padding="10.0">
+  <Label Text ="Welcome to Sprehab" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+    <Label x:Name="SpheroName" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
     <Switch Toggled="ConnectionToggle_Toggled" VerticalOptions="Center"/>
-    </StackLayout>
+  </StackLayout>
 </ContentPage>

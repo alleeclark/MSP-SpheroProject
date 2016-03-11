@@ -13,11 +13,10 @@ namespace Work.View
     public partial class SpheroConnect : ContentPage
     {
         public const string ConnectedToSpehro = "Conntect To Sphero";
-        public const string ConnectingToSphero = "Connecting To Sphero";
-        public const string NotConnectedToSphero = "Not Connected";
+        public const string ConnectingToSphero = "Connecting To Sphero {0}";
+        public const string NotConnectedToSphero = "Not Connected {0}";
 
         Sphero my_robot = null;
-        Switch something = new Switch();
 
         public SpheroConnect()
         {
@@ -72,7 +71,7 @@ namespace Work.View
 
                 //ConnectionToggle.IsToggled = IsEnabled;
                 //ConnectionToggle.OnContent = "Connected";
-                my_robot.SetRGBLED(255, 2525, 255);
+                my_robot = (Sphero)robot;
                 SpheroName.Text = string.Format(ConnectedToSpehro, robot.BluetoothName);
             }
         }
@@ -91,22 +90,34 @@ namespace Work.View
             SpheroName.Text = string.Format(ConnectedToSpehro, robot.BluetoothName);
 
         }
-        private void ConnectionToggle_Toggled(object sender, ToggledEventArgs args)
+       void ConnectionToggle_Toggled(object sender, ToggledEventArgs args)
         {
             Debug.WriteLine("Connection Toggled: ");
             //ConnectionToggle.OnContent = "Connecting...";
-            if (args.Value)
+            if(args.Value)
             {
-                if (my_robot == null)
-                {
-                    SetUpConnection();
-                }
-                else
-                {
-                    ShutDownRobotConnection();
-                }
+                SetUpConnection();
             }
+            else
+            {
+                ShutDownRobotConnection();
+            }
+            //if (args.Value)
+            //{
+            //    if (my_robot == null)
+            //    {
+            //        SetUpConnection();
+            //    }
+            //    else
+            //    {
+            //        ShutDownRobotConnection();
+            //    }
+            //}
 
+        }
+        private void OnCollisionDetected(object sender, CollisionData data)
+        {
+            Debug.WriteLine("Grab collected");
         }
     }
 }
