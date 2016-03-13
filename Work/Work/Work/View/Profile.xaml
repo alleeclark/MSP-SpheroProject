@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Work.View.Profile">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+         <ContentPage.Padding>
+           <OnPlatform x:TypeArguments="Thickness"
+                       iOS="10, 20, 10, 0"
+                       Andorid="10, 0"
+                       WinPhone="10,0" />
+           </ContentPage.Padding > 
+<ScrollView>
+  <StackLayout>
+    <StackLayout.Resources>
+      <Resources.Dictionary>
+        <Style Target="Entry">
+          <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+          </Style>
+        </Resources.Dictionary>
+        </StackLayout.Resources>
+    <Entry Placeholder="Name" Keyboard="Name"/>
+    <Entry Placeholder="Age" Keyboard="Age"/>
+    <Picker x:Name="InjuryType" SelectedIndex="{Binding Injury}" HorizontalOptions="FillAndExpand">
+      <Picker.Items>
+        <x:String>1</x:String>
+        <x:String>2</x:String>
+        <x:String>3</x:String>
+        </Picker.Items>
+        </Picker>
+    <Button x:Name="pasttest" Text="Past Test" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

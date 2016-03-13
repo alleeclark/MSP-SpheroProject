@@ -12,7 +12,9 @@ namespace Work
         public App()
         {
             // The root page of your application
-            MainPage = new SpheroConnect();
+            // MainPage = new SpheroConnect();
+            //MainPage = new WelcomePage();
+            MainPage = new NavigationPage(new WelcomePage());
         }
 
         protected override void OnStart()
