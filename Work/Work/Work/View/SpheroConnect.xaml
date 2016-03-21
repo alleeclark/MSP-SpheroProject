@@ -7,5 +7,6 @@
     <Label Text ="Welcome to Sprehab" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
     <Label x:Name="SpheroName" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
     <Switch Toggled="ConnectionToggle_Toggled" VerticalOptions="Center" HorizontalOptions="Center"/>
+    <Button Text="Set Up Your Profile" VerticalOptions="Center" HorizontalOptions="Center" Clicked="SetUpYourProfile"/>
   </StackLayout>
 </ContentPage>

@@ -23,6 +23,10 @@ namespace Work.View
             InitializeComponent();
         }
 
+        public void SetUpYourProfile(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new Profile());
+        }
         //protected override void OnNavigatedTo(NavigationEventArgs e)
         //{
         //    base.OnNavigatedTo(e);
